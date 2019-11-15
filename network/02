@@ -1,1 +1,1 @@
-ipconfig getifaddr en0
+networksetup -getinfo Ethernet | grep 'IP address' | grep -v 'none' | awk '{print $3}'
